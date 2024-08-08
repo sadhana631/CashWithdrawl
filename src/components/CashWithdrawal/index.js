@@ -1,20 +1,20 @@
-import component from 'react'
+import {Component} from 'react'
 
 import DenominationItem from '../DenominationItem'
 
 import './index.css'
 
-const CashWithdrawal extends Component {
+class CashWithdrawal extends Component {
   state = {
     balance: 2000,
   }
 
   updateBalance = value => {
-    this.setstate(prevState => ({balance: prevState.balance - value}))
+    this.setState(prevState => ({balance: prevState.balance - value}))
   }
 
   render() {
-    const {denomination} = this.props
+    const {denominationsList} = this.props
     const {balance} = this.state
     const name = 'Sarah Williams'
     const initial = name.slice(0, 1)
